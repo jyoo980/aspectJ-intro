@@ -1,6 +1,6 @@
 # Intro to AspectJ
 
-This serves as a ridiculously basic intro to the ideas of [Aspect-Oriented Programming](https://en.wikipedia.org/wiki/Aspect-oriented_programming), which was a programming paradigm developed by Gregor Kiczales at Xerox Parc. I use AspectJ, a superset of the Java programming language, beacuse of its extensive use in development and the familiarity that most software developers have with its syntax.
+This serves as a ridiculously basic intro to the ideas of [Aspect-Oriented Programming](https://en.wikipedia.org/wiki/Aspect-oriented_programming), which was a programming paradigm developed by Gregor Kiczales at Xerox Parc. I use AspectJ, a superset of the Java programming language, because of its extensive use in development and the familiarity that most software developers have with its syntax.
 
 ## Concrete Example
 
