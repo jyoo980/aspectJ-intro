@@ -53,8 +53,7 @@ public aspect ExceptionLoggerAspect {
     }
 }
 ```
-
-With the aspects above, `makeWithdrawal` is no longer responsible for logging each call to it, and some other logging
+Notice that each Aspect serves to encapsulate a cross-cutting concern which was prevalent in the system before. In the case of `ATMAspect`, we are able to capture the cross-cutting concerns which pollute the `ATM` class and remove them from the original class. The `ExceptionLoggerAspect` is now able to handle logic related to handling exceptional cases in our code without the need to have this code scattered throughout everywhere exceptions are thrown. This modularization leads to further decoupling of business logic and unrelated logic, and increases cohesion within each method. With the aspects above, `makeWithdrawal` is no longer responsible for logging each call to it, and some other logging behaviour.
 
 ```Java
 public double makeWithdrawal(double amount) throws NotEnoughMoneyException {
