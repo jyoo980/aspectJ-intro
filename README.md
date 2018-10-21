@@ -58,15 +58,11 @@ Notice that each Aspect serves to encapsulate a cross-cutting concern which was 
 ```Java
 public double makeWithdrawal(double amount) throws NotEnoughMoneyException {
     assert(amount > 0);
-    try {
-        if (this.cashReserve - amount >= 0) {
-            this.cashReserve -= amount;
-            return amount;
-        } else {
-            throw new NotEnoughMoneyException();
-        }
-    } catch (Exception err) {
-        Log.error(err);
+    if (this.cashReserve - amount >= 0) {
+        this.cashReserve -= amount;
+        return amount;
+    } else {
+        throw new NotEnoughMoneyException();
     }
 }
 ```
