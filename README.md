@@ -31,7 +31,7 @@ If we look at what `makeWithdrawal` is doing, you might notice that it's really 
 3. Actually making the withdrawal
 4. Logging that an error has been thrown when not enough money is in reserves
 
-One may argue that the core logic of this method only relates to numbers 1 and 3 of the above, and they are right. `makeWithdrawal` should not be responsible for logging when a user is making a cash withdrawal or when an error occurs, but the general business logic of the system dictates this. There should be *some* logging in case of errors or other exceptional circumstances, and if you look at the system as a whole, there are likely cases where methods handle code which is *not* part of their core business logic. These are what we call **cross-cutting concerns** - the goal of AOP is to provide a mechanism for cleanly separating business logic from cross-cutting concerns, and it does with the idea of an **Aspect**.
+One may argue that the core logic of this method only relates to numbers 2 and 3 of the above, and they are right. `makeWithdrawal` should not be responsible for logging when a user is making a cash withdrawal or when an error occurs, but the general business logic of the system dictates this. There should be *some* logging in case of errors or other exceptional circumstances, and if you look at the system as a whole, there are likely cases where methods handle code which is *not* part of their core business logic. These are what we call **cross-cutting concerns** - the goal of AOP is to provide a mechanism for cleanly separating business logic from cross-cutting concerns, and it does with the idea of an **Aspect**.
 
 This is the **Aspect** that we'll use to separate some of the logging behaviour of `makeWithdrawal` from its core concerns
 
